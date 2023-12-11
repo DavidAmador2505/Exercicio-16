@@ -35,9 +35,10 @@
             label3 = new Label();
             textBox1 = new TextBox();
             textBox2 = new TextBox();
-            textBox3 = new TextBox();
+            TxtPassword = new TextBox();
             button3 = new Button();
             checkBox1 = new CheckBox();
+            label4 = new Label();
             SuspendLayout();
             // 
             // button1
@@ -103,13 +104,13 @@
             textBox2.TabIndex = 6;
             textBox2.TextChanged += textBox2_TextChanged;
             // 
-            // textBox3
+            // TxtPassword
             // 
-            textBox3.Location = new Point(188, 204);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(100, 23);
-            textBox3.TabIndex = 7;
-            textBox3.TextChanged += textBox3_TextChanged;
+            TxtPassword.Location = new Point(188, 204);
+            TxtPassword.Name = "TxtPassword";
+            TxtPassword.Size = new Size(100, 23);
+            TxtPassword.TabIndex = 7;
+            TxtPassword.TextChanged += textBox3_TextChanged;
             // 
             // button3
             // 
@@ -132,14 +133,25 @@
             checkBox1.UseVisualStyleBackColor = true;
             checkBox1.CheckedChanged += checkBox1_CheckedChanged;
             // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(20, 17);
+            label4.Name = "label4";
+            label4.Size = new Size(38, 15);
+            label4.TabIndex = 10;
+            label4.Text = "label4";
+            label4.Click += label4_Click;
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label4);
             Controls.Add(checkBox1);
             Controls.Add(button3);
-            Controls.Add(textBox3);
+            Controls.Add(TxtPassword);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
             Controls.Add(label3);
@@ -163,8 +175,9 @@
         private Label label3;
         private TextBox textBox1;
         private TextBox textBox2;
-        private TextBox textBox3;
+        private TextBox TxtPassword;
         private Button button3;
         private CheckBox checkBox1;
+        private Label label4;
     }
 }

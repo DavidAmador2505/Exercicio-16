@@ -1,3 +1,13 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
 namespace Exercicio_16
 {
     public partial class Form1 : Form
@@ -24,15 +34,25 @@ namespace Exercicio_16
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string Nome = (textBox1.Text);
-            string Email = (textBox2.Text);
-            string Password = (textBox3.Text);
+            //Guardar dados do form nas variáveis e guardar na classe utilizador
+            string nome = textBox1.Text;
+            string email = textBox2.Text;
+            string password = TxtPassword.Text;
 
-            textBox1.Text = Convert.ToString(Classe_Utilizador.Nome);
-            textBox2.Text = Convert.ToString(Classe_Utilizador.Email);
-            textBox3.Text = Convert.ToString(Classe_Utilizador.Password);
+            Classe_Utilizador.Nome = nome;
+            Classe_Utilizador.Email = email;
+            Classe_Utilizador.Password = password;
 
-            MessageBox.Show("Confirma��o de Conta de Utilizador");
+            Classe_Utilizador.Nome = "Utilizador:" +textBox1.Text;
+            label4.Text = Classe_Utilizador.Nome;
+
+
+            MessageBox.Show("Confirmação de Conta de Utilizador");
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            FecharTodososforms.Fecharformularios();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -42,20 +62,19 @@ namespace Exercicio_16
             Seguinte.Show();
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            FecharTodososforms.Fecharformularios();
-        }
-
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-               
-        }
+            if (checkBox1.Checked)
+            {
+                TxtPassword.UseSystemPasswordChar = false;
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
+            }
 
+            else
 
+            {
+                TxtPassword.UseSystemPasswordChar = true;
+            }
         }
     }
 }
