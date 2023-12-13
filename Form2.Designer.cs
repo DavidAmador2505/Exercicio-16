@@ -125,11 +125,11 @@
             // checkBox1
             // 
             checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(188, 250);
+            checkBox1.Location = new Point(168, 253);
             checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(83, 19);
+            checkBox1.Size = new Size(120, 19);
             checkBox1.TabIndex = 9;
-            checkBox1.Text = "checkBox1";
+            checkBox1.Text = "Mostrar Password";
             checkBox1.UseVisualStyleBackColor = true;
             checkBox1.CheckedChanged += checkBox1_CheckedChanged;
             // 

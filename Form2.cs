@@ -31,7 +31,7 @@ namespace Exercicio_16
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-
+            TxtPassword.UseSystemPasswordChar = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -85,7 +85,7 @@ namespace Exercicio_16
 
         private void label4_Click(object sender, EventArgs e)
         {
-            
+
         }
     }
 }
